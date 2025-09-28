@@ -1,0 +1,96 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-logo a {
+  text-decoration: none;
+}
+
+.header-nav {
+  flex: 1;
+  border-bottom: none;
+  background: transparent;
+  margin: 0 24px;
+}
+
+.header-nav .ant-menu-item {
+  border-bottom: 2px solid transparent;
+}
+
+.header-nav .ant-menu-item-selected {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
+.header-actions {
+  flex-shrink: 0;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 16px;
+  }
+
+  .header-nav {
+    margin: 0 16px;
+  }
+
+  .header-logo .ant-typography {
+    font-size: 18px !important;
+  }
+
+  .auth-buttons {
+    gap: 4px;
+  }
+
+  .auth-buttons .ant-btn {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content {
+    padding: 0 12px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-logo .ant-typography {
+    font-size: 16px !important;
+  }
+}
